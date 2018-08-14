@@ -13,4 +13,5 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cp $PWD/.vimrc $HOME/.vimrc
+cp $PWD/monokain.vim $HOME/.vim/colors/monokain.vim
 vim +BundleInstall +qall
