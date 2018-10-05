@@ -9,8 +9,6 @@ git clone --depth 1 https://github.com/junegunn/fzf.git ~/.fzf
 ~/.fzf/install
 
 # Set up vim
-# -- Install Vundle
-
 git clone https://github.com/VundleVim/Vundle.vim.git ~/.vim/bundle/Vundle.vim
 cp $PWD/.vimrc $HOME/.vimrc
 mkdir $HOME/.vim/colors
