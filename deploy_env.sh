@@ -1,7 +1,7 @@
 #!/bin/bash
 
-# Install zsh
-sh -c "$(curl -fsSL https://raw.githubusercontent.com/robbyrussell/oh-my-zsh/master/tools/install.sh)"
+# Setup oh-my-zsh
+sh -c "$PWD/install_zsh.sh"
 cp $PWD/.zshrc $HOME/.zshrc
 
 # Install fzf
