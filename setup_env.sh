@@ -30,4 +30,13 @@ mkdir $HOME/.vim/colors
 cp $PWD/monokain.vim $HOME/.vim/colors/monokain.vim
 vim +BundleInstall +qall
 
+# Set up tmux
+if ! type "tmux" > /dev/null 2>&1; then
+  echo "Please install tmux!"
+else
+  cp $PWD/.tmux.conf.local $HOME/.tmux.conf.local
+  cp $PWD/.tmux.conf $HOME/.tmux.conf
+  echo "Ensure tmux version is >= 2.1"
+  tmux -V
+
 exit
