@@ -13,7 +13,7 @@ done
 chsh -s /bin/zsh
 
 # Copy over prompt files
-cp $PWD/prompt_simha_setup "${ZDOTDIR:-$HOME}"/.zprezto/modules/prompt/
+cp $PWD/prompt_simha_setup "${ZDOTDIR:-$HOME}"/.zprezto/modules/prompt/functions/
 
 # Copy rc files
 cp $PWD/.zshrc $HOME/.zshrc
@@ -38,5 +38,5 @@ else
   cp $PWD/.tmux.conf $HOME/.tmux.conf
   echo "Ensure tmux version is >= 2.1"
   tmux -V
-
+fi
 exit
