@@ -14,11 +14,7 @@ Plugin 'tpope/vim-fugitive'
 
 Plugin 'vim-airline/vim-airline'
 
-Plugin 'irrationalistic/vim-tasks'
-
 Plugin 'vim-syntastic/syntastic'
-
-Plugin 'Vollric/YouCompleteMe'
 
 Plugin 'christoomey/vim-tmux-navigator' 
 
