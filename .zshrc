@@ -44,10 +44,25 @@ export GOPATH="$HOME/go"
 export GOBIN="$GOPATH/bin"
 export PATH="$PATH:$GOBIN:$GOPATH"
 
+export SSLKEYLOGFILE=~/.ssl-key.log
+
 # Ruby setup
 alias gem=".rbenv/versions/2.4.6/bin/gem"
 alias ruby=".rbenv/versions/2.4.6/bin/ruby"
 alias mux="tmuxinator"
+
+# Try using Nutanix keys when ssh=ing in
+# alias ssh="ssh -i $HOME/nutanix/main/installer/ssh_keys/nutanix"
 function ssh-tmux {
   /usr/bin/ssh $@ -t -- /bin/sh -c 'tmux has-session && exec tmux attach || exec tmux'
+}
+
+function nx-ssh {
+  if [ "$#" -ne 1 ]
+  then
+    echo "Usage: $0 [host-name|host-ip]"
+    return -1
+  else
+   /usr/bin/ssh -i ~/.ssh/nutanix nutanix@$1
+  fi
 }
